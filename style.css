@@ -352,3 +352,36 @@ section .list .item .content .btn{
     font-size: 3em;
 }
 }
+section .list .item .content{
+    width: 100%;
+    padding: 20px;
+    top: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section .list .item .content .descr{
+    font-size: 16px;
+    text-align: center;
+}
+
+section .list .item .content h2{
+    font-size: 2.5em;
+    text-align: center;
+    line-height: 1.1em;
+}
+
+section .list .item .content .desc01{
+    font-size: 14px;
+    max-width: 90%;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+section .list .item .content .btn{
+    align-self: center;
+    width: 140px;
+    height: 45px;
+    font-size: 12px;
+}
