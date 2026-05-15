@@ -6,20 +6,25 @@ let container = document.querySelector('.container')
 let items = document.querySelectorAll('.list .item')
 
 let indicator = document.querySelector('.indicator')
-let dots =document.querySelectorAll('ul li.active')
+
 let list = document.querySelector('.list') 
 
+let dots = document.querySelectorAll('.indicator ul li')
+let number = document.querySelector('.numbr')
 
-function updateUI() {
-    // 1. Atualiza o número
-    numberDisplay.innerText = String(active + 1).padStart(2, '0')
+function updateIndicators() {
 
-    // 2. Atualiza as bolinhas (dots)
-    let dotOld = document.querySelector('.indicator ul li.active')
-    if (dotOld) dotOld.classList.remove('active')
+    // REMOVE ACTIVE DE TODOS
+    dots.forEach((dot) => {
+        dot.classList.remove('active')
+    })
+
+    // ADICIONA ACTIVE NO DOT ATUAL
     dots[active].classList.add('active')
-}
 
+    // MUDA O NÚMERO
+    number.innerHTML = '0' + (active + 1)
+}
 
 
 
@@ -40,7 +45,7 @@ list.style.setProperty('--calculation',  1)
     items[active].classList.add('active')
 
  
-
+updateIndicators
   
 }
 prevButton.onclick = () => {
@@ -51,7 +56,7 @@ let itemNovo = document.querySelector('.list .item.active')
  items[active].classList.add('active')
 
     
-   
+   updateIndicators()
 
 }
 
