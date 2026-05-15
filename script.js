@@ -5,9 +5,9 @@ let nextButton = document.getElementById('next')
 let container = document.querySelector('.container')
 let items = document.querySelectorAll('.list .item')
 
-let indicator = document.querySelector('.indicator')
-
-let list = document.querySelector('.list') 
+let indicators = document.querySelector('.indicator')
+/*let dots = document.querySelector(' ul li.active')*/ 
+let list = document.querySelector('.list')
 
 let dots = document.querySelectorAll('.indicator ul li')
 let number = document.querySelector('.numbr')
@@ -27,7 +27,6 @@ function updateIndicators() {
 }
 
 
-
 let active = 0
 let firstPosition = 0
 let lastPosition = items.length - 1
@@ -40,12 +39,17 @@ nextButton.onclick = () => {
 let itemOld = document.querySelector('.list .item.active')
     itemOld.classList.remove('active')
 
+   
+
+
 list.style.setProperty('--calculation',  1) 
     active= active + 1 > lastPosition ? 0 : active + 1
     items[active].classList.add('active')
 
- 
-updateIndicators
+   updateIndicators()
+
+
+
   
 }
 prevButton.onclick = () => {
@@ -55,8 +59,8 @@ let itemNovo = document.querySelector('.list .item.active')
  active = active - 1 < firstPosition ? lastPosition : active - 1
  items[active].classList.add('active')
 
-    
-   updateIndicators()
+    updateIndicators()
+   
 
 }
 
