@@ -285,3 +285,70 @@ transform: rotate(-20deg);
   
  }
 
+@media (max-width: 768px){
+
+header{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 20px;
+    justify-items: center;
+}
+
+header img{
+    width: 140px;
+}
+
+header nav ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section .list{
+    width: 90vw;
+}
+
+section .list .item .car-img{
+    width: 100%;
+    top: 30%;
+}
+
+section .list .item .car-img img{
+    width: 100%;
+}
+
+section .list .item .content{
+    width: 100%;
+    top: 55%;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+section .list .item .content p{
+    text-align: center;
+}
+
+section .list .item .content h2{
+    font-size: 3em;
+    text-align: center;
+}
+
+section .list .item .content .btn{
+    align-self: center;
+}
+
+.arrow{
+    width: 90vw;
+    top: 85%;
+}
+
+.indicator{
+    align-items: center;
+}
+
+.indicator .numbr{
+    font-size: 3em;
+}
+}
